@@ -187,10 +187,10 @@ module.exports = {
   ],
   mode: "production", // 开发模式
   devtool: "source-map", // 源代码映射
-  // optimization: {
-  //   // 会使用一个插件 SplitChunksPlugin 去代码分割
-  //   splitChunks: {
-  //     chunks: 'all'
-  //   },
-  // }
+  optimization: {
+    // 会使用一个插件 SplitChunksPlugin 去代码分割
+    splitChunks: {
+      chunks: 'all'
+    },
+  }
 };
