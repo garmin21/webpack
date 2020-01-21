@@ -1,3 +1,14 @@
+// import(/* webpackChunkName: "module2"*/'./module2.js')
+// .then(({ name, age }) => {
+//   console.log(name, age);
+// })
+// .catch(err => {
+//   console.log(err);
+// })
+
+
+
+import moment from 'moment';
 import { name, sex, age } from './2';
 import sum from './1';
 
@@ -7,6 +18,10 @@ import '../less/index.less';
 /* css */
 import '../css/iconfont.css';
 
+
+console.log(moment);
+
+
 const promise = new Promise((res, rej) => {
   setTimeout(() => {
     res(111);
@@ -14,6 +29,7 @@ const promise = new Promise((res, rej) => {
   }, 2000);
 });
 
-
 console.log(sum(1, 2));
 console.log(name, age, sex);
+
+

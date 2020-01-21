@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
   entry: "./src/js/main.js",
@@ -179,8 +180,17 @@ module.exports = {
       filename: "css/[name].[contenthash:10].css",
       chunkFilename: "css/[id].[contenthash:10].css"
     }),
-    new OptimizeCssAssetsPlugin()
+    new OptimizeCssAssetsPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'vue'
+    })
   ],
   mode: "production", // 开发模式
-  devtool: "source-map" // 源代码映射
+  devtool: "source-map", // 源代码映射
+  // optimization: {
+  //   // 会使用一个插件 SplitChunksPlugin 去代码分割
+  //   splitChunks: {
+  //     chunks: 'all'
+  //   },
+  // }
 };
