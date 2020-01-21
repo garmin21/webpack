@@ -53,5 +53,9 @@
     "chrome >= 34",
     "safari >= 8",
     "opera >= 23"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.less"
   ]
 }
