@@ -1,0 +1,7 @@
+{
+    "extends": "airbnb-base",
+    "rules":{ // 检查规则
+        "no-console" : 0,
+        "no-unused-vars" : 0
+    }
+}
